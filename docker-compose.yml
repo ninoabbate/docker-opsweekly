@@ -1,0 +1,20 @@
+# Opsweekly definitions:
+#
+#   Opsweekly database
+opsweeklydb:
+  image: aabbate/opsweeklydb:latest
+  ports:
+    - "3306"
+  hostname: opsweeklydb
+
+#   Opsweekly application
+opsweekly:
+  image: aabbate/opsweekly:latest
+  ports:
+    - "80:80"
+  links:
+    - opsweeklydb:db
+  volumes:
+    - ./config.php:/var/www/opsweekly/phplib/config.php
+  hostname: opsweekly
+  domainname: opsweekly.mycompany.com
