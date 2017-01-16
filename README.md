@@ -29,5 +29,5 @@ $  docker-compose up -d
 
 Once done, login to opsweekly using the credentials `opsweekly:Opsw33kly!`
 
-* Default url: <http://opsweekly.yourcompany.com/>, make sure to add an entry for it in your /etc/hosts to be resolved as localhost
+* Default url: <http://opsweekly.mycompany.com/>, make sure to add an entry for it in your /etc/hosts to be resolved as localhost
 * NOTE: if you change the `$prod_fqdn` variable inside config.php with your domain, you need to change the team domain too.
